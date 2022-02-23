@@ -1,0 +1,10 @@
+com\mycompany\veiculos\App.class
+modelo\Pessoa.class
+util\JpaUtil.class
+com\mycompany\veiculos\CadastroVeiculosController.class
+com\mycompany\veiculos\PrimaryController.class
+util\Dao.class
+modelo\Veiculo.class
+module-info.class
+modelo\Endereco.class
+modelo\Motorista.class
