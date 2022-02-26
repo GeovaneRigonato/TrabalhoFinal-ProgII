@@ -1,12 +1,14 @@
 package util;
 
-import modelo.Endereco;
-import modelo.Motorista;
+import java.util.List;
+import modelo.Veiculo;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+
 
 
 public class DaoTest {
@@ -29,6 +31,18 @@ public class DaoTest {
     @AfterEach
     public void tearDown() {
     }
+    
+        @Test
+    public void testInserir(){
+        Dao<Veiculo> dao = new Dao(Veiculo.class);
+        List<Veiculo> lista = dao.listarTodos();
+        
+        for (Veiculo v : lista) {
+            System.out.println(v);
+        }
+    }
+}
+
 
 //    @Test
 //    public void testInserir(){
@@ -37,15 +51,7 @@ public class DaoTest {
 //        dao.inserir(v);
 //    }
     
-//    @Test
-//    public void testInserir(){
-//        Dao<Veiculo> dao = new Dao(Veiculo.class);
-//        List<Veiculo> lista = dao.listarTodos();
-//        
-//        for (Veiculo v : lista) {
-//            System.out.println(v);
-//        }
-//    }
+
     
 //    @Test
 //    public void testInserirMotorista(){
@@ -58,4 +64,4 @@ public class DaoTest {
 //        Dao<Motorista> dao = new Dao(Motorista.class);
 //        dao.inserir(m);
 //    }
-}
+//}

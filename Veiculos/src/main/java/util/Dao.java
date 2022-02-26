@@ -41,12 +41,17 @@ public class Dao<T> {
         manager.close();
     }
 
+    
+       
     public void inserir(T objeto) {
-        manager = JpaUtil.getEntityManager();
+        try{manager = JpaUtil.getEntityManager();
         EntityTransaction tx = manager.getTransaction();
         tx.begin();
         manager.persist(objeto);
-        tx.commit();
+        tx.commit();}catch(Exception e){
+            System.out.println("Erro ao inserir"+e.getMessage());
+        }
+        
     }
 
     public List<T> listarTodos() {

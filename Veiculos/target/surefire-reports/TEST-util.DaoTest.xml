@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="util.DaoTest" time="2.08" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="util.DaoTest" time="1.673" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.1+12-LTS-39"/>
     <property name="sun.boot.library.path" value="D:\JDK\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\ProgII\Veiculos"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\ProgII\TrabalhoFinal-ProgII\Veiculos"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -14,8 +14,9 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="BR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="util.DaoTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\ProgII\Veiculos"/>
+    <property name="user.dir" value="E:\ProgII\TrabalhoFinal-ProgII\Veiculos"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
     <property name="java.runtime.version" value="17.0.1+12-LTS-39"/>
     <property name="os.arch" value="amd64"/>
@@ -28,7 +29,7 @@
     <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
     <property name="classworlds.conf" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="D:\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Users\geova\AppData\Local\Microsoft\WindowsApps;C:\Users\geova\AppData\Local\atom\bin;C:\Users\geova\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.library.path" value="D:\JDK\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python310\Scripts\;C:\Python310\;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\Git\cmd;C:\ProgramData\chocolatey\bin;D:\Node Js\;C:\Users\geova\AppData\Local\Microsoft\WindowsApps;C:\Users\geova\AppData\Local\atom\bin;C:\Users\geova\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\geova\AppData\Roaming\npm;."/>
     <property name="maven.conf" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\../conf"/>
     <property name="jdk.debug" value="release"/>
     <property name="java.class.version" value="61.0"/>
@@ -44,7 +45,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.5\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=util.DaoTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.5\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.home" value="D:\JDK"/>
     <property name="user.language" value="pt"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,5 +61,5 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="util.DaoTest" name="util.DaoTest.testInserirMotorista" time="2.08"/>
+  <testcase classname="util.DaoTest" name="util.DaoTest.testInserir" time="1.673"/>
 </testsuite>

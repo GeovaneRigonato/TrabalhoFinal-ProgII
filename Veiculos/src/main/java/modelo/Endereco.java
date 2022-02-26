@@ -12,30 +12,24 @@ import javax.persistence.Embeddable;
  */
 @Embeddable // incorporavel
 public class Endereco {
-    private String cep;
+    private String cep; 
     private String logradouro;
     private String complemento;
     private String bairro;
-    private String localidade;
+    private String localidade; 
     private String uf;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi; 
 
-    public Endereco(){
-        this.cep = "";
-        this.logradouro = "";
-        this.complemento = "";
-        this.bairro = "";
-        this.localidade = "";
-        this.uf = "";
+    public Endereco() {
+    }
+
+    public Endereco(String cep) {
+        this.cep = cep;
     }
     
-    public Endereco(String cep, String logradouro, String complemento, String bairro, String localidade, String uf) {
-        this.cep = cep;
-        this.logradouro = logradouro;
-        this.complemento = complemento;
-        this.bairro = bairro;
-        this.localidade = localidade;
-        this.uf = uf;
-    }
 
     public String getCep() {
         return cep;
@@ -84,10 +78,39 @@ public class Endereco {
     public void setUf(String uf) {
         this.uf = uf;
     }
+
+    public String getIbge() {
+        return ibge;
+    }
+
+    public void setIbge(String ibge) {
+        this.ibge = ibge;
+    }
+
+    public String getGia() {
+        return gia;
+    }
+
+    public void setGia(String gia) {
+        this.gia = gia;
+    }
+
+    public String getDdd() {
+        return ddd;
+    }
+
+    public void setDdd(String ddd) {
+        this.ddd = ddd;
+    }
+
+    public String getSiafi() {
+        return siafi;
+    }
+
+    public void setSiafi(String siafi) {
+        this.siafi = siafi;
+    }
     
     
-    
-    
-    
-    
+
 }

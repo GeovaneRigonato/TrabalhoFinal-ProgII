@@ -1,10 +1,15 @@
+com\mycompany\veiculos\ListarVeiculosController.class
+com\mycompany\veiculos\AlterarVeiculosController.class
 com\mycompany\veiculos\App.class
+com\mycompany\veiculos\CadastroPessoasController.class
 modelo\Pessoa.class
 util\JpaUtil.class
 com\mycompany\veiculos\CadastroVeiculosController.class
 com\mycompany\veiculos\PrimaryController.class
 util\Dao.class
-modelo\Veiculo.class
 module-info.class
+modelo\Veiculo.class
 modelo\Endereco.class
+com\mycompany\veiculos\BuscarVeiculosController.class
 modelo\Motorista.class
+modelo\Buscador.class

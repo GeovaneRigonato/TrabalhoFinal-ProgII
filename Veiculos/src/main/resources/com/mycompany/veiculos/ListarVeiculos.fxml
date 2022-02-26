@@ -7,8 +7,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.veiculos.ListarVeiculosController">
+<AnchorPane id="AnchorPane" prefHeight="628.0" prefWidth="535.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.veiculos.ListarVeiculosController">
    <children>
       <Button fx:id="btnToGoBack" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#switchToVoltar" text="Voltar" />
+      <Label layoutX="196.0" layoutY="30.0" text="Lista de veiculos">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

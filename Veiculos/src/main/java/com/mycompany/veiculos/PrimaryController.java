@@ -12,7 +12,7 @@ public class PrimaryController {
        
      
     @FXML
-    private void switchToCadastro() throws IOException {
+    private void switchToCadastroVeiculo() throws IOException {
         App.setRoot("CadastroVeiculos");
     }
     
@@ -22,7 +22,7 @@ public class PrimaryController {
     }
     
     @FXML
-    private void switchToAlterar() throws IOException {
+    private void switchToAlterarVeiculo() throws IOException {
         App.setRoot("AlterarVeiculos");
     }
     
@@ -31,7 +31,8 @@ public class PrimaryController {
         App.setRoot("BuscarVeiculos");
     }
 
-    
-    
-    
+        @FXML
+    private void switchToCadastroPessoa() throws IOException {
+        App.setRoot("CadastroPessoas");
+    }
 }
