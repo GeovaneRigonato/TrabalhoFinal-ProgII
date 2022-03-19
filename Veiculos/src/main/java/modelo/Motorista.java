@@ -58,7 +58,10 @@ public class Motorista extends Pessoa{
         this.secao = secao;
     }
     
-    
+    @Override
+    public String toString(){
+        return "Nome -> "+this.getNome() + " CNH -> "+ this.cnh;
+    }
     
     
 }

@@ -23,10 +23,10 @@ public class Dao<T> {
         return objeto;
     }
 
-    public T buscarPorCodigo(Object id) {
+    public T buscarPorLogin(String login) {
         T objeto;
         manager = JpaUtil.getEntityManager();
-        objeto = manager.find(classe, id);
+        objeto = manager.find(classe, login);
         manager.close();
         return objeto;
     }

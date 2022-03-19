@@ -5,7 +5,7 @@
 package com.mycompany.veiculos;
 import java.io.IOException;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+
 
 
 public class PrimaryController {
@@ -22,8 +22,12 @@ public class PrimaryController {
     }
     
     @FXML
-    private void switchToAlterarVeiculo() throws IOException {
-        App.setRoot("AlterarVeiculos");
+    private void switchToAlugarVeiculo() throws IOException {
+        App.setRoot("AlugarVeiculos");
+    }
+    @FXML
+    private void switchToDevolverVeiculo() throws IOException {
+        App.setRoot("DevolverVeiculos");
     }
     
     @FXML
@@ -31,8 +35,13 @@ public class PrimaryController {
         App.setRoot("BuscarVeiculos");
     }
 
-        @FXML
-    private void switchToCadastroPessoa() throws IOException {
-        App.setRoot("CadastroPessoas");
+    @FXML
+    private void switchToCadastroMotorista() throws IOException {
+        App.setRoot("CadastroMotorista");
+    }
+    
+    @FXML
+    private void switchToCadastroOperador() throws IOException {
+        App.setRoot("CadastroOperador");
     }
 }

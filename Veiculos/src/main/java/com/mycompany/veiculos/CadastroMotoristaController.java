@@ -9,7 +9,7 @@ import modelo.Endereco;
 import modelo.Motorista;
 import util.Dao;
 
-public class CadastroPessoasController{
+public class CadastroMotoristaController{
 
     @FXML
     private TextField inputNome;
@@ -25,18 +25,21 @@ public class CadastroPessoasController{
     private TextField inputLocalidade;
     @FXML
     private TextField inputUF;
-    
+        
     Motorista  motorista = new Motorista();
+    
+    private static Endereco endereco = new Endereco();
     
     @FXML
     private void buscarCEP() throws IOException{
+        
         Buscador buscador = new Buscador();
             try{
-            Endereco temp = buscador.buscar(inputCep.getText());
-            inputLogradouro.setText(temp.getLogradouro());
-            inputBairro.setText(temp.getBairro());
-            inputLocalidade.setText(temp.getLocalidade());
-            inputUF.setText(temp.getUf());
+            endereco = buscador.buscar(inputCep.getText());
+            inputLogradouro.setText(endereco.getLogradouro());
+            inputBairro.setText(endereco.getBairro());
+            inputLocalidade.setText(endereco.getLocalidade());
+            inputUF.setText(endereco.getUf());
             }catch(Exception e){
                 Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setHeaderText("");
@@ -53,7 +56,7 @@ public class CadastroPessoasController{
             motorista.setCnh(inputCNH.getText());
             motorista.setSecao("");
 //          motorista.getEndereço().setBairro(inputBairro.getText());
-            motorista.setEndereço(new Endereco());
+            motorista.setEndereço(endereco);
             
 
             Dao<Motorista> dao = new Dao (Motorista.class);
@@ -71,9 +74,6 @@ public class CadastroPessoasController{
             alerta.showAndWait(); 
         }
     }
-    
-    
-    
     
     @FXML
     private void switchToPrimary() throws IOException {

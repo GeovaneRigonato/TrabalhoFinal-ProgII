@@ -21,7 +21,7 @@ public class Endereco {
     private String ibge;
     private String gia;
     private String ddd;
-    private String siafi; 
+    private String siafi;
 
     public Endereco() {
     }
@@ -110,7 +110,5 @@ public class Endereco {
     public void setSiafi(String siafi) {
         this.siafi = siafi;
     }
-    
-    
 
 }
