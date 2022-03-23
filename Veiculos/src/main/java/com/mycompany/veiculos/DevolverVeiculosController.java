@@ -1,7 +1,6 @@
 package com.mycompany.veiculos;
 
 import java.io.IOException;
-import java.util.Collections;
 import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -20,45 +19,37 @@ public class DevolverVeiculosController {
     private DatePicker dataDevolucao;
             
     @FXML
-    private ComboBox <Veiculo> comboVeiculos;
-    private List<Veiculo> veiculos;
-    private ObservableList <Veiculo> listarVeiculos;
-               
-    @FXML
-    private ComboBox <Motorista> comboMotoristas;
-    private List <Motorista> motoristas;
-    private ObservableList <Motorista> listarMotoristas;
+    private ComboBox <Operacoes> comboOperacoes;
+    private List<Operacoes> operacoes;
+    private ObservableList <Operacoes> listarOperacoes;
+    
+    
     
     @FXML
     public void initialize(){
-        Dao<Veiculo> daoVeiculos = new Dao(Veiculo.class);
+        Dao<Operacoes> daoOperacoes = new Dao(Operacoes.class);
         
-        veiculos = daoVeiculos.listarTodos();
+              
+        operacoes = daoOperacoes.listarTodos();
         
-        listarVeiculos = FXCollections.observableArrayList(veiculos);
-        comboVeiculos.getItems().addAll(listarVeiculos);
-        comboVeiculos.setValue(veiculos.get(0));
+        listarOperacoes = FXCollections.observableArrayList(operacoes);
+        comboOperacoes.getItems().addAll(listarOperacoes);
+        comboOperacoes.setValue(operacoes.get(0));
         
         
-         Dao<Motorista> daoMotorista = new Dao(Motorista.class);
-        
-        motoristas = daoMotorista.listarTodos();
-        
-        listarMotoristas = FXCollections.observableArrayList(motoristas);
-        comboMotoristas.getItems().addAll(listarMotoristas);
-        comboMotoristas.setValue(motoristas.get(0));
+       
        
      }
     
-    public void DevolverCarro(){
+    public void devolverCarro(){
         
         try{
-            Operacoes op =  new Operacoes();
+            Operacoes op =  comboOperacoes.getValue();
             op.setDataDevolucao(dataDevolucao.getValue());
-            op.setMotorista(comboMotoristas.getValue());
-            op.setVeiculo(comboVeiculos.getValue());
+                    
+            
             Dao<Operacoes> daoOp = new Dao(Operacoes.class);
-            daoOp.inserir(op);
+            daoOp.alterar(op);
             
             Alert alerta = new Alert(Alert.AlertType.INFORMATION);
             alerta.setHeaderText("");
@@ -69,6 +60,7 @@ public class DevolverVeiculosController {
             Alert alerta = new Alert(Alert.AlertType.ERROR);
             alerta.setHeaderText("");
             alerta.setContentText("Erro ao devolver carro.");
+            System.out.println("cara "+ e.getMessage());
             alerta.showAndWait(); 
         }
         
